@@ -1,0 +1,17 @@
+//// FUNCTIONS \\\\
+
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+
+@if($developer-boxes){
+   #page {
+        header {background-color: #ccc;}
+        nav {background-color: #eee;}
+        section {background-color: #999;}
+        article {background-color: #888;}
+        aside {background-color: #777;}
+        footer {background-color: #666;}
+    }
+}

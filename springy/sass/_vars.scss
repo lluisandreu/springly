@@ -1,14 +1,5 @@
-//// FUNCTIONS \\\\
-
-@function calc-percent($target, $container) {
-  @return ($target / $container) * 100%;
-}
 
 ////GENERAL\\\\
-
-$breakpoint-first: 550px;
-
-$breakpoint-second: 940px;
 
 // Total width with side margins
 $page-max-width: 940px;
@@ -23,6 +14,11 @@ $aside-gutter: 20px;
 
 $article_width: $content-width - $aside-width - $aside-gutter;
 
+/// Breakpoints
+$breakpoint-first: 550px;
+
+$breakpoint-second: 940px;
+
 // Display main elements with backgroung color
 $developer-boxes: true;
 
@@ -34,15 +30,4 @@ $family-sans: "Roboto", arial, sans-serif;
 $color-white: #fff;
 $color-black: #000;
 
-
-@if($developer-boxes){
-    @warn "Working with development boxes";
-   #page {
-        header {background-color: #ccc;}
-        nav {background-color: #eee;}
-        section {background-color: #999;}
-        article {background-color: #888;}
-        aside {background-color: #777;}
-        footer {background-color: #666;}
-    }
-}
+@import 'functions';

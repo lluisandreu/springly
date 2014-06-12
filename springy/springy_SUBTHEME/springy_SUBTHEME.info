@@ -1,12 +1,11 @@
-name = Springy Base Theme
-description = Custom built responsive base theme by Website Development Ltd.
-version = 7.x-1.0
+name = Springy SUBTHEME
+description = Responsive theme based on Springy Base Theme by Website Development Ltd.
 core = 7.x
+version = 1.0
 
-stylesheets[all][] = stylesheets/springly-normalize.css
+base theme = springy
+
 stylesheets[all][] = stylesheets/styles.css
-
-scripts[] = js/springy.custom.js
 
 features[] = logo
 features[] = favicon
