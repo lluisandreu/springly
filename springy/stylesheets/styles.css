@@ -1,0 +1,26 @@
+#page header {
+  background-color: #ccc; }
+#page nav {
+  background-color: #eee; }
+#page section {
+  background-color: #999; }
+#page article {
+  background-color: #888; }
+#page aside {
+  background-color: #777; }
+#page footer {
+  background-color: #666; }
+
+@media only screen and (min-width: 550px) {
+  #page section article.aside {
+    width: 62.22222%;
+    float: right; }
+  #page section aside {
+    width: 35.55556%;
+    float: left;
+    margin-right: 2.22222%; } }
+.inner {
+  max-width: 940px;
+  width: 91.48936%;
+  margin: 0 auto;
+  position: relative; }

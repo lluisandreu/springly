@@ -1,0 +1,41 @@
+@import 'vars';
+
+//////// BREAKPOINTS
+@media only screen and (max-width : ($breakpoint-first - 1px )) {
+    // Only screens < 549px width
+    @import "narrow";
+}
+
+@media only screen and (min-width : $breakpoint-first) {
+    // Only Screens > 550px widh
+    @import "wide";
+}
+
+@media only screen and (min-width: $breakpoint-second){
+    // Only screens > 940px width
+    @import "fullwidth";
+}
+
+//////////////////////////////////// SPRINGLY STYLES \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+.inner {max-width: $page-max-width; width: calc-percent($content-width - ($gutter * 2), $page-max-width); margin: 0 auto; position: relative;}
+
+#page {
+    header {
+
+    }
+    nav {
+
+    }
+    section {
+        article {
+
+        }
+        aside {
+
+        }
+    }
+    footer {
+
+    }
+}

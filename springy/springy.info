@@ -1,0 +1,24 @@
+name = Springy Responsive Theme
+description = Custom built responsive base theme by Website Development Ltd.
+version = 7.x-1.0
+core = 7.x
+
+stylesheets[all][] = stylesheets/springly-normalize.css
+stylesheets[all][] = stylesheets/styles.css
+
+scripts[] = js/springy.custom.js
+
+features[] = logo
+features[] = favicon
+
+regions[header]         =      Header
+regions[nav]            =      Navigation
+;regions[banner]         =      Banner
+regions[aside]          =      Aside
+regions[content]        =      Main Content
+regions[footer_first]   =      Footer first
+regions[footer_second]  =      Footer second
+regions[footer_third]   =      Footer third
+regions[footer_forth]   =      Footer forth
+
+screenshot = springy.png

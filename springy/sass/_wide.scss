@@ -1,0 +1,24 @@
+#page {
+    header {
+
+    }
+    nav {
+
+    }
+    section {
+
+        article {
+
+        }
+
+        article.aside {
+            width: calc-percent($article-width, $content-width); float: right;
+        }
+        aside {
+            width: calc-percent($aside-width, $content-width); float: left; margin-right: calc-percent($aside-gutter, $content-width);
+        }
+    }
+    footer {
+
+    }
+}
