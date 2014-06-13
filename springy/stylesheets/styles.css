@@ -1,26 +1,19 @@
-#page header {
-  background-color: #ccc; }
-#page nav {
-  background-color: #eee; }
-#page section {
-  background-color: #999; }
-#page article {
-  background-color: #888; }
-#page aside {
-  background-color: #777; }
-#page footer {
-  background-color: #666; }
+/* line 8, ../sass/_functions.scss */
+#page header { background-color: #ccc; }
+/* line 9, ../sass/_functions.scss */
+#page nav { background-color: #eee; }
+/* line 10, ../sass/_functions.scss */
+#page section { background-color: #999; }
+/* line 11, ../sass/_functions.scss */
+#page article { background-color: #888; }
+/* line 12, ../sass/_functions.scss */
+#page aside { background-color: #777; }
+/* line 13, ../sass/_functions.scss */
+#page footer { background-color: #666; }
 
-@media only screen and (min-width: 550px) {
-  #page section article.aside {
-    width: 62.22222%;
-    float: right; }
-  #page section aside {
-    width: 35.55556%;
-    float: left;
-    margin-right: 2.22222%; } }
-.inner {
-  max-width: 940px;
-  width: 91.48936%;
-  margin: 0 auto;
-  position: relative; }
+@media only screen and (min-width: 550px) { /* line 14, ../sass/_wide.scss */
+  #page section article.aside { width: 62.22222%; float: right; }
+  /* line 17, ../sass/_wide.scss */
+  #page section aside { width: 35.55556%; float: left; margin-right: 2.22222%; } }
+/* line 21, ../sass/styles.scss */
+.inner { max-width: 940px; width: 91.48936%; margin: 0 auto; position: relative; }

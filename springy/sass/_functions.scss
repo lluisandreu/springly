@@ -1,10 +1,8 @@
-//// FUNCTIONS \\\\
-
+// Calculate width percentage based on container
 @function calc-percent($target, $container) {
   @return ($target / $container) * 100%;
 }
-
-
+// Shows elements as blocks
 @if($developer-boxes){
    #page {
         header {background-color: #ccc;}
@@ -14,4 +12,12 @@
         aside {background-color: #777;}
         footer {background-color: #666;}
     }
+}
+
+/// Type of sidebar layout
+@if($aside-float == left){
+    $article-float: right;
+}
+@else {
+    $article-float: left;
 }

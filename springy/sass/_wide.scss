@@ -12,10 +12,17 @@
         }
 
         article.aside {
-            width: calc-percent($article-width, $content-width); float: right;
+            width: calc-percent($article-width, $content-width); float: $article-float;
         }
         aside {
-            width: calc-percent($aside-width, $content-width); float: left; margin-right: calc-percent($aside-gutter, $content-width);
+            width: calc-percent($aside-width, $content-width);
+            float: $aside-float;
+            @if($aside-float == left){
+                margin-right: calc-percent($aside-gutter, $content-width);
+            }
+            @else {
+                margin-left: calc-percent($aside-gutter, $content-width);
+            }
         }
     }
     footer {

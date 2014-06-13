@@ -1,6 +1,4 @@
 
-////GENERAL\\\\
-
 // Total width with side margins
 $page-max-width: 940px;
 
@@ -8,11 +6,15 @@ $gutter: 20px;
 
 $content-width: $page-max-width - ($gutter * 2);
 
+$aside-float: left; // Default left
+
+$article-float: default;
+
 $aside-width: 320px;
 
 $aside-gutter: 20px;
 
-$article_width: $content-width - $aside-width - $aside-gutter;
+$article-width: $content-width - $aside-width - $aside-gutter;
 
 /// Breakpoints
 $breakpoint-first: 550px;
