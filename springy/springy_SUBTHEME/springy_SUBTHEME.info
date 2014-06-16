@@ -1,10 +1,11 @@
-name = Springy SUBTHEME
-description = Responsive theme based on Springy Base Theme by Website Development Ltd.
+name = Springy Gumby SUBTHEME
+description = Subtheme based on Springy Base Theme by Website Development Ltd.
 core = 7.x
 version = 1.0
 
 base theme = springy
 
+stylesheets[all][] = stylesheets/gumby.css
 stylesheets[all][] = stylesheets/styles.css
 
 features[] = logo
