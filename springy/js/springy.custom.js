@@ -16,4 +16,5 @@
     function filesNewTab() {
         $('.field-type-file').find('a').attr('target', '_blank');
     }
+
 })(jQuery);
