@@ -18,6 +18,20 @@ function springy_preprocess_page(&$vars) {
     drupal_add_html_head($addtohead,'viewport');
 }
 
+function springy_theme() {
+  $items = array();
+  // create custom user-login.tpl.php
+  $items['user_login'] = array(
+  'render element' => 'form',
+  'path' => drupal_get_path('theme', 'springy') . '/theme',
+  'template' => 'user-login',
+  'preprocess functions' => array(
+  'your_themename_preprocess_user_login'
+  ),
+ );
+return $items;
+}
+
 /// Make Drupal messages pretty
 function springy_theme_registry_alter(&$theme_registry) {
   $theme_registry['status_messages']['function'] = '_custom_theme_status_messages';
@@ -66,3 +80,4 @@ function _custom_theme_status_messages($variables) {
   }
   return $output;
 }
+
