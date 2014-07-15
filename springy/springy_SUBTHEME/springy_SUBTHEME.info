@@ -1,12 +1,14 @@
 name = Springy Gumby SUBTHEME
-description = Subtheme based on Springy Base Theme by Website Development Ltd.
+description = Subtheme based on Springy Base Theme by Lluis Oliver.
 core = 7.x
 version = 1.0
 
 base theme = springy
 
+scripts[] = js/gumby.init.js
+; Render at the bottom
+
 stylesheets[all][] = stylesheets/gumby.css
-stylesheets[all][] = stylesheets/styles.css
 
 features[] = logo
 features[] = favicon

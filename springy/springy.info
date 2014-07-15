@@ -25,7 +25,9 @@ scripts[] = js/libs/ui/gumby.radiobtn.js
 scripts[] = js/libs/ui/gumby.tabs.js
 scripts[] = js/libs/ui/gumby.navbar.js
 scripts[] = js/libs/ui/jquery.validation.js
-scripts[] = js/libs/gumby.init.js
+
+;scripts[] = js/libs/gumby.init.js
+;RENDER IN SUBTHEME
 
 features[] = logo
 features[] = favicon
