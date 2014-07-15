@@ -24,6 +24,10 @@ iframe {width: 100%; max-width: 100%;}
 label, legend, th {font-weight: 500; padding: 10px 0;}
 strong {font-weight: 500;}
 
+/* Page Login */
+.login-body {
+  margin: 20px 0 30px 20px;
+}
 
 /* IAC */
 .iac-container {

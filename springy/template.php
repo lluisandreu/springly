@@ -80,3 +80,4 @@ function _custom_theme_status_messages($variables) {
   }
   return $output;
 }
+
