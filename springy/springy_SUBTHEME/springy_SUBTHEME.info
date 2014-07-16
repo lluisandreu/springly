@@ -1,5 +1,5 @@
 name = Springy Gumby SUBTHEME
-description = Subtheme based on Springy Base Theme by Lluis Oliver.
+description = Custom Drupal 7 theme based on Gumby Sass Framework. Built by Lluis Oliver.  http://gumbyframework.com/
 core = 7.x
 version = 1.0
 

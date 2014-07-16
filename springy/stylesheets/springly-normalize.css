@@ -16,6 +16,8 @@ table, tr {width: 100%; max-width: 100%; border: none;}
 /* Menus */
 ul {margin: 0; padding: 0;}
 li {margin: 0; list-style: none; list-style-image: none; list-style-type: none;}
+.field-name-body ul {margin: inherit !important; padding: inherit !important;}
+.field-name-body li {list-style: inherit !important; list-style-image: inherit !important; list-style-type: inherit !important;}
 
 /* iframe */
 iframe {width: 100%; max-width: 100%;}
