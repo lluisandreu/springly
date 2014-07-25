@@ -1,22 +1,37 @@
 <?php
 
+if(theme_get_setting('viewport_settings')){
+  function springy_html_head_alter(&$head_elements) {
+    $viewport_settings = theme_get_setting('viewport_settings');
+    $head_elements['viewport']['#type'] = 'markup';
+    $head_elements['viewport']['#markup'] = '<meta name="viewport" content="'.$viewport_settings.'">';
+  }
+}
+
+
 /// Add custom Font Types
 function springy_preprocess_html(&$variables) {
-    drupal_add_css("http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic|Open+Sans:300italic,400italic,600italic,400,300,600|Roboto+Condensed:400,700", array('type' => 'external'));
+  if(theme_get_setting('font_settings')){
+    $font_settings = theme_get_setting('font_settings');
+
+    if($font_settings['source_sans_pro'] !== 0){
+      drupal_add_css("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,200italic,300italic,400italic,600italic", array('type' => 'external'));
+    }
+    if($font_settings['open_sans'] !== 0){
+      drupal_add_css("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300", array('type' => 'external'));
+    }
+    if($font_settings['roboto_slab'] !== 0){
+      drupal_add_css("http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700", array('type' => 'external'));
+    }
+    if($font_settings['roboto'] !== 0){
+      drupal_add_css("http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic", array('type' => 'external'));
+    }
+    if($font_settings['ubuntu'] !== 0){
+     drupal_add_css("http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,300italic,400italic,500italic", array('type' => 'external'));
+    }
+  }
 }
 
-// Add Viewport
-function springy_preprocess_page(&$vars) {
-
-    // Meta Viewport
-    $viewport = '<meta name="viewport" content="initial-scale=1, maximum-scale=1">';
-    $addtohead = array(
-        '#type' => 'markup',
-        '#markup' => $viewport
-    );
-
-    drupal_add_html_head($addtohead,'viewport');
-}
 
 function springy_theme() {
   $items = array();
@@ -32,52 +47,10 @@ function springy_theme() {
 return $items;
 }
 
-/// Make Drupal messages pretty
-function springy_theme_registry_alter(&$theme_registry) {
-  $theme_registry['status_messages']['function'] = '_custom_theme_status_messages';
+// Messages
+include "theme/system/messages.tpl.inc";
+
+function springy_css_alter(&$css) {
+    unset($css[drupal_get_path('module','system').'/system.theme.css']);
+    unset($css[drupal_get_path('module','system').'/system.menus.css']);
 }
-/**
- * Custom theme function that overrides
- * theme('status_messages').
- */
-function _custom_theme_status_messages($variables) {
-   $display = $variables['display'];
-  $output = '';
-
-  $status_heading = array(
-    'status' => t('Status message'),
-    'error' => t('Error message'),
-    'warning' => t('Warning message'),
-    'info' => t('Informative message'),
-  );
-
-  // Map Drupal message types to their corresponding gumby classes.
-  $status_class = array(
-    'status' => 'success',
-    'error' => 'danger',
-    'warning' => 'warning',
-    // Not supported, but in theory a module could send any type of message.
-    // @see drupal_set_message()
-    // @see theme_status_messages()
-    'info' => 'info',
-  );
-
-  foreach (drupal_get_messages($display) as $type => $messages) {
-    $class = (isset($status_class[$type])) ? $status_class[$type] : '';
-
-
-    if (!empty($status_heading[$type])) {
-      $output .= '<h4 class="element-invisible">' . $status_heading[$type] . "</h4>\n";
-    }
-
-
-      $output .= " <ul>\n";
-      foreach ($messages as $message) {
-        $output .= '  <li class="alert '.$status_class[$type].'">' . $message . "</li>\n";
-      }
-      $output .= " </ul>\n";
-
-  }
-  return $output;
-}
-

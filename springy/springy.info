@@ -1,38 +1,15 @@
 name = Springy Base Theme
-description = Custom Drupal 7 theme based on Gumby Sass Framework. Built by Lluis Oliver.  http://gumbyframework.com/
-version = 7.x-1.1
+description = Springy is a Drupal theme based on Gumby Sass Framework and HTML5 standards. Developed and adapted by Lluis Oliver. Visit Gumby for documentation http://gumbyframework.com/.
+version = 7.x-1.2
 core = 7.x
 
 ;stylesheets[all][]     = /modules/system/system.menus.css
 ;stylesheets[all][]     = /modules/system/system.theme.css
 ;stylesheets[all][]     = /modules/system/system.messages.css
 
-stylesheets[all][] = stylesheets/springly-normalize.css
 stylesheets[all][] = stylesheets/gumby.css
-stylesheets[all][] = stylesheets/styles.css
 
 scripts[] = js/springy.custom.js
-
-scripts[] = js/libs/jquery.mobile.custom.min.js
-scripts[] = js/libs/modernizr-2.6.2.min.js
-scripts[] = js/libs/gumby.js
-scripts[] = js/libs/ui/gumby.retina.js
-scripts[] = js/libs/ui/gumby.fixed.js
-scripts[] = js/libs/ui/gumby.skiplink.js
-scripts[] = js/libs/ui/gumby.toggleswitch.js
-scripts[] = js/libs/ui/gumby.checkbox.js
-scripts[] = js/libs/ui/gumby.radiobtn.js
-scripts[] = js/libs/ui/gumby.tabs.js
-scripts[] = js/libs/ui/gumby.navbar.js
-scripts[] = js/libs/ui/gumby.inview.js
-scripts[] = js/libs/ui/gumby.comments.js
-scripts[] = js/libs/ui/jquery.validation.js
-
-;scripts[] = js/libs/gumby.init.js
-;RENDER IN SUBTHEME
-
-scripts[] = js/main.js
-scripts[] = js/plugins.js
 
 features[] = logo
 features[] = favicon
@@ -48,3 +25,14 @@ regions[footer_third]   =      Footer third
 regions[footer_forth]   =      Footer forth
 
 screenshot = springy.png
+
+settings[viewport_settings] = "width=device-width, initial-scale=1"
+settings[jquery_settings]   = 1
+settings[modernizr_settings] = 1
+settings[font_settings][open_sans] = 1
+settings[gumby_js_settings] = 1
+;settings[font_settings][]    = roboto
+;settings[font_settings][]    = roboto_slab
+;settings[font_settings][]    = source_sans_pro
+;settings[font_settings][]    = ubuntu
+

@@ -1,12 +1,11 @@
-name = Springy Gumby SUBTHEME
-description = Custom Drupal 7 theme based on Gumby Sass Framework. Built by Lluis Oliver.  http://gumbyframework.com/
+name = Springy SUBTHEME
+description = Springy is a Drupal theme based on Gumby Sass Framework and HTML5 standards. Developed and adapted by Lluis Oliver. Visit Gumby for documentation http://gumbyframework.com/.
 core = 7.x
 version = 1.0
+;Remove this when creating a subtheme!
+hidden = TRUE
 
 base theme = springy
-
-scripts[] = js/gumby.init.js
-; Render at the bottom
 
 stylesheets[all][] = stylesheets/gumby.css
 
@@ -24,3 +23,13 @@ regions[footer_third]   =      Footer third
 regions[footer_forth]   =      Footer forth
 
 screenshot = springy.png
+
+settings[viewport_settings] = "width=device-width, initial-scale=1"
+settings[jquery_settings]   = 1
+settings[modernizr_settings] = 1
+settings[font_settings][open_sans] = 1
+settings[gumby_js_settings] = 1
+;settings[font_settings][]    = roboto
+;settings[font_settings][]    = roboto_slab
+;settings[font_settings][]    = source_sans_pro
+;settings[font_settings][]    = ubuntu

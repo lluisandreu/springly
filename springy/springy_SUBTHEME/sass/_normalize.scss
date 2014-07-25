@@ -1,0 +1,85 @@
+
+
+/* links */
+a:link, a:visited, a:hover {text-decoration: none; color: #5eb6e5;}
+
+/* Paragraphs */
+p {margin: 0; padding: 16px 0; line-height: 1.65em;}
+
+/* inputs */
+input[type=text], input[type=search], input[type=email], input[type=password], input[type=tel], select {padding: 4px; border: 1px solid #ccc; max-width: 220px; width: 95%;}
+input[type=submit] {cursor: pointer;}
+/* tables */
+hr {border: 1px solid #fff !important; }
+table, tr {width: 100%; max-width: 100%; border: none;}
+
+/* Menus */
+ul {margin: 0; padding: 0;}
+li {margin: 0; list-style: none; list-style-image: none; list-style-type: none;}
+.field-name-body ul {margin: inherit !important; padding: inherit !important;}
+.field-name-body li {list-style: inherit !important; list-style-image: inherit !important; list-style-type: inherit !important;}
+
+/* iframe */
+iframe {width: 100%; max-width: 100%;}
+
+ /*other html elements */
+label, legend, th {font-weight: 500; padding: 10px 0;}
+strong {font-weight: 500;}
+
+/* Page Login */
+.login-body {
+  margin: 20px 0 30px 20px;
+}
+
+/* IAC */
+.iac-container {
+  position: relative; }
+
+.iac {
+  position: absolute; }
+
+.iac a {
+  display: block;
+  background-repeat: no-repeat;
+  text-decoration: none; }
+
+.iac-edit {
+  top: 5px;
+  right: 5px; }
+
+.iac-edit-block {
+  top: 15px;
+  right: 5px; }
+
+
+.iac-edit a {
+  background-image: url(../images/edit-page.png);
+  width: 105px;
+  height: 27px; }
+
+.iac-edit a:hover {
+  background-image: url(../images/edit-page-hover.png);
+  text-decoration: none !important; }
+
+.iac-edit-block a{
+  background-image: url(../images/edit-block.png);
+  width: 105px;
+  height: 27px;
+ }
+
+.iac-edit-block a:hover {
+  background-image: url(../images/edit-block-hover.png);
+  text-decoration: none !important; }
+
+.iac-rearrange {
+  top: 50px;
+  right: 5px; }
+
+.iac-rearrange a {
+  background-image: url(../images/rearrange.png);
+  width: 105px;
+  height: 27px; }
+
+.iac-rearrange a:hover {
+  background-image: url(../images/rearrange-hover.png);
+  text-decoration: none !important; }

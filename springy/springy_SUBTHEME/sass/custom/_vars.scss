@@ -1,22 +1,65 @@
-/////////////////////// VARIABLES AND MIXINS ///////////////////////////////
-///////////////////////////////////////////////////////////////////////////
+///// Colours
+
+$color-brown: #8E8268;
+$color-blue: #5B90B8;
+$color_lightblue: #AFDDFF;
+
+///// Mixins
+
+@mixin shadow-plain {
+-webkit-box-shadow: 0px 1px 26px 0px rgba(51,51,51,1);
+-moz-box-shadow: 0px 1px 26px 0px rgba(51,51,51,1);
+box-shadow: 0px 1px 26px 0px rgba(51,51,51,1);
+}
+
+@mixin shadow-right-bottom {
+-webkit-box-shadow: 23px 25px 23px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: 23px 25px 23px -21px rgba(0,0,0,0.75);
+box-shadow: 23px 25px 23px -21px rgba(0,0,0,0.75);
+}
 
 
-///////////////////////////////////////// fonts
+.lifted {
+    -moz-border-radius:4px;
+    border-radius:4px;
+}
 
-$serif: 'Roboto Slab', serif;
-$sans-serif: 'Open Sans', sans-serif;
+.lifted:before,
+.lifted:after {
+    bottom:21px;
+    left:10px;
+    width:50%;
+    height:20%;
+    max-width:44%;
+    max-height:100px;
+    -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.6);
+    box-shadow:0 15px 10px rgba(0, 0, 0, 0.6);
+    -webkit-transform:rotate(-3deg);
+    -moz-transform:rotate(-3deg);
+    -ms-transform:rotate(-3deg);
+    -o-transform:rotate(-3deg);
+    transform:rotate(-3deg);
+    z-index: -2;
+}
 
-//////////////////////////////////////// Colours
+.lifted:after {
+    right:10px;
+    left:auto;
+    -webkit-transform:rotate(3deg);
+    -moz-transform:rotate(3deg);
+    -ms-transform:rotate(3deg);
+    -o-transform:rotate(3deg);
+    transform:rotate(3deg);
+}
 
-$color-black: #000000;
-$color-white: #ffffff;
-$color-darkgrey: #212121;
-$color-mediumgrey: #333333;
-$color-blue: #40A8D6;
-$color-violet: #5C2483;
-$color-light-grey: #EDEDED;
+.drop-shadow {
+position: relative;
+}
 
-
-/////////////////////////////////////// Mixins
-
+.drop-shadow:before,
+.drop-shadow:after {
+    content:"";
+    position:absolute;
+    z-index:-2;
+}
