@@ -15,7 +15,7 @@ $path_to_theme = $base_path . path_to_theme('springy');
 
 <title><?php print $head_title; ?></title>
 
-<!-- STYLESHEETS -->
+<!-- Stylesheets -->
 <?php print $styles; ?>
 
 
@@ -30,9 +30,12 @@ if(theme_get_setting('modernizr_settings')){
 
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 
+<!-- $page_top -->
 <?php print $page_top; ?>
 
 <!-- Javascript messages --><div id="js-messages"></div>
+
+<!-- $page -->
 <?php print $page; ?>
 
 <?php if(theme_get_setting('jquery_settings')): ?>
@@ -40,12 +43,8 @@ if(theme_get_setting('modernizr_settings')){
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?php print $path_to_theme . "/js/lib/jquery-1.10.1.min.js"; ?>"><\/script>')</script>
 <?php endif; ?>
-    <!--
-    Include gumby.js followed by UI modules followed by gumby.init.js
-    Or concatenate and minify into a single file -->
-<!-- Custom Scripts -->
-<?php print $scripts; ?>
 
+<!-- Initiate Gumby -->
 <?php if(theme_get_setting('gumby_js_settings')): ?>
 <script gumby-touch="<?php print $path_to_theme . '/js/libs'; ?>" src="<?php print $path_to_theme . '/gumby.min.js'; ?>"></script>
 <?php else: ?>
@@ -61,12 +60,15 @@ if(theme_get_setting('modernizr_settings')){
 <script src="<?php print $path_to_theme . '/js/plugins.js'; ?>"></script>
 <script src="<?php print $path_to_theme . '/js/main.js'; ?>"></script>
 
-    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-    <!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-    <![endif]-->
+<!-- Custom Scripts -->
+<?php print $scripts; ?>
+
+<!--[if lt IE 7 ]>
+<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+
+<!-- $page_bottom -->
 <?php print $page_bottom; ?>
   </body>
 </html>
