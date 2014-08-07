@@ -32,60 +32,7 @@ strong {font-weight: $font-weight-semibold;}
 /* Grippie */
 .resizable-textarea .grippie {margin-top: -12px;}
 
-/* Page Login */
-.login-body {
-  margin: 20px 0 ;
-}
-
-/* IAC */
-.iac-container {
-  position: relative; }
-
-.iac {
-  position: absolute; }
-
-.iac a {
-  display: block;
-  background-repeat: no-repeat;
-  text-decoration: none; }
-
-.iac-edit {
-  top: 5px;
-  right: 5px; }
-
-.iac-edit-block {
-  top: 15px;
-  right: 5px; }
 
 
-.iac-edit a {
-  background-image: url(../images/edit-page.png);
-  width: 105px;
-  height: 27px; }
 
-.iac-edit a:hover {
-  background-image: url(../images/edit-page-hover.png);
-  text-decoration: none !important; }
 
-.iac-edit-block a{
-  background-image: url(../images/edit-block.png);
-  width: 105px;
-  height: 27px;
- }
-
-.iac-edit-block a:hover {
-  background-image: url(../images/edit-block-hover.png);
-  text-decoration: none !important; }
-
-.iac-rearrange {
-  top: 50px;
-  right: 5px; }
-
-.iac-rearrange a {
-  background-image: url(../images/rearrange.png);
-  width: 105px;
-  height: 27px; }
-
-.iac-rearrange a:hover {
-  background-image: url(../images/rearrange-hover.png);
-  text-decoration: none !important; }
