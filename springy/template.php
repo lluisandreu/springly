@@ -4,7 +4,7 @@ if(theme_get_setting('viewport_settings')){
   function springy_html_head_alter(&$head_elements) {
     $viewport_settings = theme_get_setting('viewport_settings');
     $head_elements['viewport']['#type'] = 'markup';
-    $head_elements['viewport']['#markup'] = '<meta name="viewport" content="'.$viewport_settings.'">';
+    $head_elements['viewport']['#markup'] = '<meta name="viewport" content="'.$viewport_settings.'">' . "\n" ;
   }
 }
 
@@ -19,6 +19,9 @@ function springy_preprocess_html(&$variables) {
     }
     if($font_settings['open_sans'] !== 0){
       drupal_add_css("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300", array('type' => 'external'));
+    }
+    if($font_settings['roboto_condensed'] !== 0){
+      drupal_add_css("http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,400,700,300", array('type' => 'external'));
     }
     if($font_settings['roboto_slab'] !== 0){
       drupal_add_css("http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700", array('type' => 'external'));
@@ -54,3 +57,4 @@ function springy_css_alter(&$css) {
     unset($css[drupal_get_path('module','system').'/system.theme.css']);
     unset($css[drupal_get_path('module','system').'/system.menus.css']);
 }
+

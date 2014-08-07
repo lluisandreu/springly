@@ -18,6 +18,7 @@
 
     function filesNewTab() {
         $('.field-type-file').find('a').attr('target', '_blank');
+        $('.file').find('a').attr('target', '_blank');
     }
 
     function prettyButtons() {
@@ -27,7 +28,9 @@
     function prettyForms() {
         $('input[type=text], input[type=email], input[type=password]').addClass('input').wrap('<div class="field"></div>');
         $('textarea').addClass('input textarea').wrap('<div class="field"></div>');
-        $('select').wrap('<div class="field"><div class="picker"></div></div>');
+        $('select:not([multiple]').wrap('<div class="field"><div class="picker"></div></div>');
+
+
     }
 
     function ieCheck(){

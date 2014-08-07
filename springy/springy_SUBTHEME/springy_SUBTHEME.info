@@ -31,5 +31,6 @@ settings[font_settings][open_sans] = 1
 settings[gumby_js_settings] = 1
 ;settings[font_settings][]    = roboto
 ;settings[font_settings][]    = roboto_slab
+;settings[font_settings][]    = roboto_condensed
 ;settings[font_settings][]    = source_sans_pro
 ;settings[font_settings][]    = ubuntu

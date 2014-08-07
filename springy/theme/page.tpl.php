@@ -19,7 +19,7 @@
             </div>
         </div>
     </nav>
-    <section>
+    <main>
         <div class="row">
             <div class="messages-area twelve columns">
                 <?php print $messages; ?>
@@ -50,7 +50,7 @@
                 </div>
             <?php endif; ?>
         </div>
-    </section>
+    </main>
     <footer>
         <div class="row">
                 <div id="footer-columns" class="twelve columns">

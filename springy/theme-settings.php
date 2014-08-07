@@ -19,6 +19,7 @@ function springy_form_system_theme_settings_alter(&$form, &$form_state) {
     $font_list = array(
         'roboto' => '<a href="https://www.google.com/fonts/specimen/Roboto" target="_blank">Roboto</a>',
         'roboto_slab' => '<a href="https://www.google.com/fonts/specimen/Roboto+Slab" target="_blank">Roboto Slab</a>',
+        'roboto_condensed' => '<a href="https://www.google.com/fonts/specimen/Roboto+Condensed" target="_blank">Roboto Condensed</a>',
         'open_sans' => '<a href="https://www.google.com/fonts/specimen/Open+Sans" target="_blank">Open Sans</a>',
         'source_sans_pro' => '<a href="https://www.google.com/fonts/specimen/Source+Sans+Pro" target="_blank">Source Sans Pro</a>',
         'ubuntu' => '<a href="https://www.google.com/fonts/specimen/Ubuntu" target="_blank">Ubuntu</a>',
