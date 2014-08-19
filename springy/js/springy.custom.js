@@ -28,9 +28,6 @@
     function prettyForms() {
         $('input[type=text], input[type=email], input[type=password]').addClass('input').wrap('<div class="field"></div>');
         $('textarea').addClass('input textarea').wrap('<div class="field"></div>');
-        $('select:not([multiple]').wrap('<div class="field"><div class="picker"></div></div>');
-
-
     }
 
     function ieCheck(){

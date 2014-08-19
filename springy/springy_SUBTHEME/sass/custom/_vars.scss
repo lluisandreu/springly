@@ -70,7 +70,6 @@ box-shadow: 23px 25px 23px -21px rgba(0,0,0,0.75);
 }
 
 
-
 /// INLINE EDITING
 .iac-container {
   position: relative;
@@ -86,7 +85,7 @@ box-shadow: 23px 25px 23px -21px rgba(0,0,0,0.75);
 }
 
 .iac-edit {
-  top: 25px;
+  top: 10px;
   right: 5px;
 }
 
@@ -95,6 +94,9 @@ box-shadow: 23px 25px 23px -21px rgba(0,0,0,0.75);
   right: 5px;
 }
 
-.iac-edit a, iac-rearrange a {
-  color: #fff;
+.iac-edit a, .iac-rearrange a {
+  color: #fff !important;
+  font-family: $font-family;
+  font-weight: $font-weight-light;
+  @include font-size(14px);
 }

@@ -38,31 +38,6 @@ function springy_form_system_theme_settings_alter(&$form, &$form_state) {
         '#description' => t('Change the setting into content=""'),
     );
 
-    $form['jquery'] = array(
-        '#type' => 'fieldset',
-        '#title' => t('jQuery settings'),
-        '#description' => t('Replace Drupal jQuery version for the Springy one.'),
-
-        'jquery_settings' => array(
-            '#type' => 'checkbox',
-            '#title' => 'Replace jQuery',
-            '#default_value' => theme_get_setting('jquery_settings'),
-            '#description' => t('Springy and Gumby come with jQuery 1.10.1, untick this setting if you want to use Drupal jQuery version. This may breack some features!'),
-        ),
-    );
-
-    $form['gumby_js'] = array(
-        '#type' => 'fieldset',
-        '#title' => t('Gumby JS settings'),
-        '#description' => t('Aggregate all Gumby JS in one gumby.min.js file. Recommended for production sites.'),
-
-        'gumby_js_settings' => array(
-            '#type' => 'checkbox',
-            '#title' => 'Aggregate and minify gumby JS files',
-            '#default_value' => theme_get_setting('gumby_js_settings'),
-        ),
-    );
-
     $form['modernizr'] = array(
         '#type' => 'fieldset',
         '#title' => t('Modernizr'),
@@ -72,6 +47,22 @@ function springy_form_system_theme_settings_alter(&$form, &$form_state) {
             '#title' => t('Include the last version of Modernizr. Recommended!'),
             '#default_value' => theme_get_setting('modernizr_settings'),
             '#description' => t('Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.'),
+        ),
+    );
+
+    $form['wmt_validation'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Webmaster tools validator'),
+
+        'wmt_validation_check' => array(
+            '#type' => 'checkbox',
+            '#title' => t('Verify your site on Webmaster Tools using a <meta> tag in the head'),
+            '#default_value' => theme_get_setting('wmt_validation_check'),
+        ),
+        'wmt_validation_text' => array(
+            '#type' => 'textfield',
+            '#title' => 'Paste your code here',
+            '#default_value' => theme_get_setting('wmt_validation_text'),
         ),
     );
 
