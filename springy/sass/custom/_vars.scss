@@ -58,6 +58,12 @@ box-shadow: 23px 25px 23px -21px rgba(0,0,0,0.75);
 /// ERRORS LINK
 .alert.danger a {color: #fff;}
 
+/// VIEWS PAGER
+.pager {
+    margin-top: 10px;
+    text-align: center;
+    li {display: inline; text-align: center; padding: 10px;}
+}
 
 /// LOGIN PAGE
 

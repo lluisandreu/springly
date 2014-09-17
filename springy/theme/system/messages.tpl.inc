@@ -8,8 +8,8 @@ function springy_theme_registry_alter(&$theme_registry) {
  * theme('status_messages').
  */
 function _custom_theme_status_messages($variables) {
-   $display = $variables['display'];
-  $output = '';
+  $display = $variables['display'];
+  $output = '<div class="springy-messages">';
 
   $status_heading = array(
     'status' => t('Status message'),
@@ -45,5 +45,7 @@ function _custom_theme_status_messages($variables) {
       $output .= " </ul>\n";
 
   }
+  $output .= '</div>';
+
   return $output;
 }
