@@ -27,11 +27,12 @@
 
     function prettyForms() {
         $('input[type=text], input[type=email], input[type=password]').addClass('input').wrap('<div class="field"></div>');
+        $('select').wrap('<div class="field"></div>');
         $('textarea').addClass('input textarea').wrap('<div class="field"></div>');
     }
 
-    function ieCheck(){
-        if($('html').hasClass('ie7')){
+    function ieCheck() {
+        if ($('html').hasClass('ie7')) {
             $("#js-messages").append('<div class="message warning" style="padding: 5px;" class="message warning">You are using an old version of <u>Internet Explorer</u>. Some features on the site may not work. Consider updating or changing your browser.</div>');
         }
     }

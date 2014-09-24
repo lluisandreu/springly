@@ -8,13 +8,15 @@ blockquote {font-style: italic;}
 input[type=text], input[type=search], input[type=email], input[type=password], input[type=tel], select {max-width: 250px;}
 input[type=submit] {cursor: pointer;}
 select[multiple] {padding: 5px; font-family: $font-family; border: 1px solid #ccc;}
+select {padding: 0 10px; background: #FFF; color: #555; border: 1px solid #D8D8D8; height: 36px; line-height: 34px; @include font-size(14px); @include border-radius(4px);}
 input[type=checkbox], .form-type-checkbox {margin: 10px 0;}
+input[type=submit] {margin-top: 20px;}
 
 /* Menus */
 ul {margin: 0; padding: 0;}
 li {margin: 0; list-style: none; list-style-image: none; list-style-type: none;}
-.field-name-body ul {margin: inherit !important; padding: inherit !important;}
-.field-name-body li {list-style: inherit !important; list-style-image: inherit !important; list-style-type: inherit !important;}
+.field-name-body ul {margin: inherit !important; padding-left: 20px;}
+.field-name-body li {list-style-type: disc;}
 
 /* images in text */
 .field-name-body img {-moz-border-radius:4px; border-radius:4px; height: auto !important;}
