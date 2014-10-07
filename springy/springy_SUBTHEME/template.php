@@ -1,10 +1,11 @@
 <?php
 
+/*
 if(!module_exists("jquery_update")){
   drupal_set_message(t("Springy requires jQuery Update (> 1.9) to work properly"), 'warning', FALSE);
 }
 
-function springy_html_head_alter(&$head_elements) {
+function springy_CUSTOM_html_head_alter(&$head_elements) {
     if(theme_get_setting('viewport_settings')){
     $viewport_settings = theme_get_setting('viewport_settings');
     $head_elements['viewport']['#type'] = 'markup';
@@ -18,7 +19,7 @@ function springy_html_head_alter(&$head_elements) {
 }
 
 /// Add custom Font Types
-function springy_preprocess_html(&$variables) {
+function springy_CUSTOM_preprocess_html(&$variables) {
   if(theme_get_setting('font_settings')){
     $font_settings = theme_get_setting('font_settings');
 
@@ -44,7 +45,7 @@ function springy_preprocess_html(&$variables) {
 }
 
 
-function springy_theme() {
+function springy_CUSTOM_theme() {
   $items = array();
   // create custom user-login.tpl.php
   $items['user_login'] = array(
@@ -61,7 +62,7 @@ return $items;
 // Messages
 include "theme/system/messages.tpl.inc";
 
-function springy_css_alter(&$css) {
+function springy_CUSTOM_css_alter(&$css) {
     unset($css[drupal_get_path('module','system').'/system.theme.css']);
     unset($css[drupal_get_path('module','system').'/system.menus.css']);
     unset($css[drupal_get_path('module','system').'/system.base.css']);
@@ -74,3 +75,4 @@ function springy_css_alter(&$css) {
 
 
 }
+*/

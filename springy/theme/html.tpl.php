@@ -24,7 +24,7 @@ $path_to_theme = $base_path . path_to_theme('springy');
 <?php
 if(theme_get_setting('modernizr_settings')){
   print '<!-- MODERNIZR -->' . "\n";
-  print '<script src="'. $path_to_theme . '/js/libs/modernizr-2.8.3.min.js' . '"></script>';
+  print '<script src="'. $path_to_theme . '/js/libs/modernizr-2.8.3.min.js' . '" async></script>';
 }
 ?>
 
