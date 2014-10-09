@@ -20,6 +20,9 @@ $path_to_theme = $base_path . path_to_theme('springy');
 <!-- Drupal render Stylesheets -->
 <?php print $styles; ?>
 
+<!--[if lt IE 9]>
+    <div class="message warning"><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p></div>
+<![endif]-->
 
 <?php
 if(theme_get_setting('modernizr_settings')){

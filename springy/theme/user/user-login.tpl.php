@@ -1,4 +1,7 @@
-<div class="login-page__body">
+<fieldset>
+    <legend>Log in to your account</legend>
     <?php print drupal_render_children($form) ?>
-    <div class="login-page__password"><p><a href="<?php print url('user/password'); ?>">Have you lost your password?</a></p></div>
-</div>
+    <div class="field">
+        <div class="login-link btn default"><a href="<?php print url('user/password'); ?>">Have you lost your password?</a></div>
+    </div>
+</fieldset>

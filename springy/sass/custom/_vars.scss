@@ -61,9 +61,8 @@ box-shadow: 23px 25px 23px -21px rgba(0,0,0,0.75);
 
 /// LOGIN PAGE
 
-.login-body {
+#user-login {
   margin: 20px 0 ;
-  .description {@include font-size(12px);}
   .password-recovery {margin-top: 20px;}
   .field {margin-bottom: 0;}
   .form-item {margin-bottom: 15px;}
