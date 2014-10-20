@@ -46,13 +46,10 @@ li {
     list-style-type: none;
 }
 .field-name-body ul {
-    margin: inherit !important;
-    padding: inherit !important;
+    margin-left: 20px;
 }
 .field-name-body li {
-    list-style: inherit !important;
-    list-style-image: inherit !important;
-    list-style-type: inherit !important;
+    list-style: initial;
 }
 /* images in text */
 
@@ -72,7 +69,6 @@ li {
 /* iframe */
 
 iframe {
-    width: 100%;
     max-width: 100%;
 }
 /*other html elements */
@@ -127,3 +123,6 @@ strong {
         color: #333;
     }
 }
+
+/* Messages links */
+.alert.danger a {color: #fff;}
