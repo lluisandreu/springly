@@ -6,8 +6,8 @@
 
     function iac() {
 
-        var container = document.querySelectorAll('.iac-container');
-        var buttons = document.querySelectorAll('.iac');
+        var container = document.querySelectorAll('.iac-container'),
+            buttons = document.querySelectorAll('.iac');
 
         if (buttons.length != 0) {
             for (var i = buttons.length - 1; i >= 0; i--) {
@@ -26,7 +26,7 @@
     }
 
     function filesNewTab() {
-        var link = document.querySelectorAll('.field-type-file');
+        var link = document.getElementsByClassName('.field-type-file');
         for (var i = link.length - 1; i >= 0; i--) {
             var a = link[i].getElementsByTagName('a');
             a[0].setAttribute('target', '_blank');

@@ -830,3 +830,49 @@ body.navbar-fixed #navbar-administration.navbar-oriented,
   .field {margin-bottom: 0;}
   .form-item {margin-bottom: 15px;}
 }
+
+
+/* Messages */
+
+.element-invisible {
+    display: none;
+}
+/* Search Module */
+
+.search-block-form__field, .search-form-block .form-actions {
+    float: left;
+}
+/* Register Form & Login */
+
+.password-strength {
+    width: 17em;
+    float: right;
+    margin-top: 1.4em;
+}
+.password-strength-text {
+    float: right;
+    font-weight: bold;
+}
+.password-strength-title {
+    display: inline;
+}
+.password-indicator {
+    background-color: #C4C4C4;
+    height: 0.3em;
+    width: 100%;
+}
+.password-indicator div {
+    height: 100%;
+    width: 0%;
+    background-color: #47C965;
+}
+.login-link {
+    margin: 20px 0;
+    float: right;
+    a {
+        color: #333;
+    }
+}
+
+/* Messages links */
+.alert.danger a {color: #fff;}

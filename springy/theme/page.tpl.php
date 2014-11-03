@@ -1,4 +1,5 @@
-<div id="page">
+<div id="page" class="offcanvas-page-wrapper">
+<div class=" offcanvas-page-container">
     <header>
         <div class="row">
             <div class="twelve columns special head">
@@ -66,4 +67,5 @@
                 </div>
             </div>
     </footer>
+    </div>
 </div>

@@ -63,6 +63,20 @@ function springy_preprocess_html(&$variables) {
      drupal_add_css("//fonts.googleapis.com/css?family=Ubuntu:300,400,500,300italic,400italic,500italic", array('type' => 'external'));
     }
   }
+  // Move JS files "$scripts" to page bottom for perfs/logic.
+  // Add JS files that *needs* to be loaded in the head in a new "$head_scripts" scope.
+  // For instance the Modernizr lib.
+  $path = drupal_get_path('theme', 'springy');
+  drupal_add_js($path . '/js/libs/modernizr-2.8.3.min.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
+}
+
+// Used in conjunction with https://gist.github.com/1417914
+
+/**
+ * Implements hook_process_html().
+ */
+function springy_process_html(&$vars) {
+  $vars['head_scripts'] = drupal_get_js('head_scripts');
 }
 
 
