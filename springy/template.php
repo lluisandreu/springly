@@ -10,20 +10,55 @@ if(!module_exists("jquery_update")){
 function springy_form_alter(&$form, &$form_state, $form_id) {
     switch ($form_id) {
       // Tweak Drupal Search Module
-      case 'search_block_form':
-        $form['search_block_form']['#attributes']['class'] = array("input");
-        $form['search_block_form']['#attributes']['placeholder'] = 'I am searching for...';
-        $form['search_block_form']['#prefix'] = '<div class="field search-block-form__field">';
-        $form['search_block_form']['#suffix'] = '</div>';
-        $form['search_block_form']['#size'] = 20;
-        break;
       case 'search_form':
-        $form['basic']['keys']['#attributes']['class'][] = "input";
-        $form['basic']['keys']['#prefix'] = '<div class="field search-form__field">';
-        $form['basic']['keys']['#suffix'] = '</div>';
+        // Add a clearfix class so the results don't overflow onto the form.
+        $form['#attributes']['class'][] = 'clearfix';
+
+
+        // Remove container-inline from the container classes.
+        $form['basic']['#attributes']['class'] = array();
+
+        // Hide the default button from display.
+        $form['basic']['submit']['#attributes']['class'][] = 'element-invisible';
+
+        // Implement a theme wrapper to add a submit button containing a search
+        // icon directly after the input element.
+        $form['basic']['keys']['#theme_wrappers'] = array('springy_search_form_wrapper');
+        //control the width of the input
+        $form['basic']['keys']['#attributes']['class'][] = 'input wide text';
+        $form['basic']['keys']['#attributes']['placeholder'] = t('Search');
+        break;
+      case 'search_block_form':
+        $form['#attributes']['class'][] = 'form-search';
+
+        $form['search_block_form']['#title'] = '';
+        $form['search_block_form']['#attributes']['placeholder'] = t('Search');
+        //control the width of the input
+        $form['search_block_form']['#attributes']['class'][] ='input narrow text';
+        // Hide the default button from display and implement a theme wrapper
+        // to add a submit button containing a search icon directly after the
+        // input element.
+        $form['actions']['submit']['#attributes']['class'][] = 'element-invisible';
+        $form['search_block_form']['#theme_wrappers'] = array('springy_search_form_wrapper');
+
+        // Apply a clearfix so the results don't overflow onto the form.
+        $form['#attributes']['class'][] = 'content-search';
         break;
     }
+}
 
+/**
+ * Theme function implementation for MYTHEME_search_form_wrapper.
+ */
+function springy_springy_search_form_wrapper($variables) {
+  $output = '<div class="field append">';
+  $output .= $variables['element']['#children'];
+  $output .= '<button type="submit" class="medium default btn">';
+  $output .= '<i class="icon-search entypo scale-lg"></i>';
+  $output .= '<span class="element-invisible">' . t('Search') . '</span>';
+  $output .= '</button>';
+  $output .= '</div>';
+  return $output;
 }
 
 function springy_html_head_alter(&$head_elements) {
@@ -107,7 +142,12 @@ function springy_theme() {
   'springy_preprocess_user_pass_form'
   ),
 );
+  $items['springy_search_form_wrapper'] = array(
+    'render element' => 'element',
+  );
+
 return $items;
+
 }
 
 // Unset Drupal Stylesheets

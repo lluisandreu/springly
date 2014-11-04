@@ -1,3 +1,3 @@
-<div class="search-form-block clearfix">
+<div class="search-form-block">
   <?php print $search_form; ?>
 </div>

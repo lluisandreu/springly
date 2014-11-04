@@ -1,6 +1,6 @@
 <?php
 $type = '';
-if($result['fields']['ss_filemime'] === 'application/pdf'){
+if(isset($result['fields']) && $result['fields']['ss_filemime'] === 'application/pdf'){
   $type = 'pdf';
 }
 ?>
@@ -16,7 +16,7 @@ if($result['fields']['ss_filemime'] === 'application/pdf'){
   </h3>
   <?php print render($title_suffix); ?>
   <div class="search-snippet-info">
-    <?php if ($snippet): ?>
+    <?php if (isset($snippet) && isset($result['snippets'])): ?>
       <p class="search-snippet"<?php print $content_attributes; ?>><?php print $result['snippets']['content'][0]; ?></p>
     <?php endif; ?>
       <p class="bundle link"><?php print '<em><strong>' . $result['type'] . '</strong> - <a href="'.$result['link'].'">'. $result['link'] . '</a></em>'; ?></p>

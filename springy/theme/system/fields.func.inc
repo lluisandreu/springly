@@ -2,11 +2,17 @@
 
 function springy_textfield($variables) {
   $element = $variables['element'];
-  $element['#attributes']['type'] = 'text';
-  element_set_attributes($element, array('id', 'name', 'value', 'size', 'maxlength'));
-  _form_set_class($element, array('text input textfield'));
 
-  $output = '<div class="field"><input' . drupal_attributes($element['#attributes']) . ' /></div>';
+    element_set_attributes($element, array('id', 'name', 'value', 'size', 'maxlength'));
+  if($element['#attributes']['name'] != "search_block_form" && $element['#attributes']['name'] != "keys"){
+    $element['#attributes']['type'] = 'text';
+    _form_set_class($element, array('text input textfield'));
+    $output = '<div class="field"><input' . drupal_attributes($element['#attributes']) . ' /></div>';
+  } else {
+    $element['#attributes']['type'] = 'search';
+    _form_set_class($element, array());
+    $output = '<input' . drupal_attributes($element['#attributes']) . ' />';
+  }
 
   return $output;
 }
@@ -32,18 +38,6 @@ function springy_emailfield($variables) {
 
   return $output;
 }
-
-function springy_search($variables) {
-  $element = $variables['element'];
-  $element['#attributes']['type'] = 'search';
-  element_set_attributes($element, array('id', 'name', 'value', 'size', 'maxlength'));
-  _form_set_class($element, array('text input textfield'));
-
-  $output = '<div class="field "><input' . drupal_attributes($element['#attributes']) . ' /></div>';
-
-  return $output;
-}
-
 
 function springy_textarea($variables) {
 $element = $variables['element'];
