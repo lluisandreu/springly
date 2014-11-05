@@ -839,8 +839,10 @@ body.navbar-fixed #navbar-administration.navbar-oriented,
 }
 /* Search Module */
 
-.search-block-form__field, .search-form-block .form-actions {
-    float: left;
+#search-block-form {
+// Avoids Firefox layout issues
+  button {box-sizing: content-box;}
+  input[type=search] {box-sizing: content-box;}
 }
 /* Register Form & Login */
 
