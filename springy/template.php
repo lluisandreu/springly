@@ -44,6 +44,15 @@ function springy_form_alter(&$form, &$form_state, $form_id) {
         // Apply a clearfix so the results don't overflow onto the form.
         $form['#attributes']['class'][] = 'content-search';
         break;
+      case 'apachesolr_search_custom_page_search_form':
+
+        $form['basic']['submit']['#value'] = "<i class='icon-search'></i>";
+        $form['basic']['keys']['#title'] = '';
+        $form['basic']['keys']['#placeholder'] = t('Search');
+        //control the width of the input
+        $form['basic']['keys']['#attributes']['class'][] ='input text narrow';
+        $form['basic']['#attributes']['class'][] = 'field append solr-search';
+        break;
     }
 }
 

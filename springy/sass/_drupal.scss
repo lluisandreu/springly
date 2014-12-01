@@ -878,3 +878,12 @@ body.navbar-fixed #navbar-administration.navbar-oriented,
 
 /* Messages links */
 .alert.danger a {color: #fff;}
+
+/* Solr Search fix */
+
+.solr-search {
+  input[type=search], button {
+    float: left;
+  }
+}
+

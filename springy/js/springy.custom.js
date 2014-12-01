@@ -1,8 +1,10 @@
 (function() {
 
-    iac();
-    filesNewTab();
-    svgFallback();
+    function init(){
+        iac();
+        filesNewTab();
+        svgFallback();
+    }
 
     function iac() {
 
@@ -16,10 +18,16 @@
 
             for (var i = container.length - 1; i >= 0; i--) {
                 container[i].onmouseover = function() {
-                    this.querySelector('.iac').style.display = "block";
+                    this.querySelectorAll('.iac')[0].style.display = "block";
+                    if(this.querySelectorAll('.iac')[1]) {
+                        this.querySelectorAll('.iac')[1].style.display = "block";
+                    }
                 }
                 container[i].onmouseout = function() {
-                    this.querySelector('.iac').style.display = "none";
+                    this.querySelectorAll('.iac')[0].style.display = "none";
+                    if(this.querySelectorAll('.iac')[1]) {
+                        this.querySelectorAll('.iac')[1].style.display = "none";
+                    }
                 }
             };
         }
@@ -45,5 +53,5 @@
             }
         }
     }
-
+    init();
 })();

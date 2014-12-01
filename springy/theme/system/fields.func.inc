@@ -4,7 +4,7 @@ function springy_textfield($variables) {
   $element = $variables['element'];
 
     element_set_attributes($element, array('id', 'name', 'value', 'size', 'maxlength'));
-  if($element['#attributes']['name'] != "search_block_form" && $element['#attributes']['name'] != "keys"){
+  if(isset($element['#attributes']['name']) && $element['#attributes']['name'] != "search_block_form" && $element['#attributes']['name'] != "keys"){
     $element['#attributes']['type'] = 'text';
     _form_set_class($element, array('text input textfield'));
     $output = '<div class="field"><input' . drupal_attributes($element['#attributes']) . ' /></div>';
