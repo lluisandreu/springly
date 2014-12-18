@@ -67,7 +67,7 @@ function springy_select($variables) {
   element_set_attributes($element, array('id', 'name', 'size'));
   //_form_set_class($element, array('form-select'));
 
-  return '<div class="picker"><select' . drupal_attributes($element['#attributes']) . '>' . form_select_options($element) . '</select></div>';
+  return '<div class="field field-picker"><select' . drupal_attributes($element['#attributes']) . '>' . form_select_options($element) . '</select></div>';
 }
 
 function springy_password($variables) {
